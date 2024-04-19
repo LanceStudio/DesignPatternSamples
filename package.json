@@ -1,0 +1,16 @@
+{
+  "name": "com.lance.designpattern",
+  "version": "1.0.0",
+  "displayName": "Design Pattern",
+  "description": "A collection of design patterns and architectures implementations",
+  "samples": [
+    {
+      "displayName": "MVVM",
+      "description": "Model-View-ViewModel pattern",
+      "path": "Samples~/MVVM"
+    }
+  ],
+  "author": {
+    "name": "Lance"
+  }
+}
