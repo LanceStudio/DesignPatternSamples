@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace UndoRedo {
 
+    [DefaultExecutionOrder(-1)]
     public class ApplicationUndoRedo : MonoBehaviour {
 
         [SerializeField] private UndoRedoService undoRedoService;

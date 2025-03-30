@@ -1,11 +1,16 @@
 # CHANGELOG
 
-## [1.1.0] - 2024-20-04
+## [1.2.0] - 2025-03-30
+
+### Added
+- Notification sample
+
+## [1.1.0] - 2024-04-20
 
 ### Added
 - UndoRedo sample
 
-## [1.0.0] - 2024-19-04
+## [1.0.0] - 2024-04-19
 
 ### Added
 - MVVM sample
