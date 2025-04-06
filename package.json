@@ -5,6 +5,11 @@
   "description": "A collection of design patterns and architectures implementations",
   "samples": [
     {
+      "displayName": "DragAndDrop",
+      "description": "Drag and Drop service",
+      "path": "Samples~/DragAndDrop"
+    },
+    {
       "displayName": "MVVM",
       "description": "Model-View-ViewModel pattern",
       "path": "Samples~/MVVM"

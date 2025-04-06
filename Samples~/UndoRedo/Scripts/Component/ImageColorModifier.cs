@@ -7,7 +7,7 @@ namespace UndoRedo {
     /// <summary>
     /// Allow the user to change the color of the image with a ColorPicker.
     /// I choose to put all commands related to a class in it. So it's available only through MyClass.MyCommand.
-    /// If can change the command class access modifier to suit your needs, for example :
+    /// You can change the command class access modifier to suit your needs, for example :
     ///  - If you want commands accessible from the outside like this one, set it to public.
     ///  - If you want commands to be accessible only from the Parent class, set it to private.
     /// </summary>
