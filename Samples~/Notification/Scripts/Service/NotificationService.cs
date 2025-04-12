@@ -12,7 +12,7 @@ namespace Notification {
         [Header("References")]
         [SerializeField] private Canvas notificationCanvas;
         [SerializeField] private GraphicRaycaster canvasGraphicRaycaster;
-        [SerializeField] private LayoutElement contentLayoutElement;
+        [SerializeField] private RectTransform notificationParent;
         [SerializeField] private Image overlayImage;
 
         [Header("Settings")]
@@ -32,9 +32,6 @@ namespace Notification {
         private void Update() {
             if(canvasGraphicRaycaster.enabled != IsNotificationDisplayed) {
                 canvasGraphicRaycaster.enabled = IsNotificationDisplayed;
-            }
-            if(!Mathf.Approximately(contentLayoutElement.preferredHeight, notificationCanvas.pixelRect.height)) {
-                contentLayoutElement.preferredHeight = notificationCanvas.pixelRect.height;
             }
             if(overlayDisplayed && !notifications.Exists(elem => elem.Type == NotificationType.BlockingError)) {
                 overlayCancellationSource?.Cancel();
@@ -93,7 +90,7 @@ namespace Notification {
             }
 
             Notification notification = Instantiate(notificationPrefab);
-            notification.transform.SetParent(contentLayoutElement.transform);
+            notification.transform.SetParent(notificationParent.transform);
             notification.Title = title;
             notification.Message = message;
             notification.Type = type;

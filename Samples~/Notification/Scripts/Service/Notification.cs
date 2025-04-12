@@ -12,8 +12,6 @@ namespace Notification {
         public event Action OnNotificationClosed;
 
         [SerializeField] private Animator notificationAnimator;
-        [SerializeField] private RectTransform animatedContent;
-        [SerializeField] private LayoutElement contentLayout;
         [SerializeField] private Button closeButton;
         [SerializeField] private TextMeshProUGUI titleText;
         [SerializeField] private TextMeshProUGUI messageText;
@@ -54,12 +52,6 @@ namespace Notification {
             closeButton.gameObject.SetActive(Type == NotificationType.BlockingError);
             if(Type != NotificationType.BlockingError) {
                 _ = CloseAndDestroy(Duration);
-            }
-        }
-
-        private void Update() {
-            if(!Mathf.Approximately(contentLayout.preferredHeight, animatedContent.rect.height)) {
-                contentLayout.preferredHeight = animatedContent.rect.height;
             }
         }
 
